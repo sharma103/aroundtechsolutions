@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800");
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'poppins', sans-serif;
+}
+body{
+   background-color: var(--var-color);
+}
+:root{
+   --var-color:#EBD3F8;
+   --fcolor:#2E073F;
+   --ecolor:#720455;
+}
+/* NAVBAR */
+.navbar{
+   background-color: var(--fcolor);
+   color: var(--var-color);
+}
+.navbar h1{
+   text-align: center;
+   font-size: 30px;
+   font-weight: 700;
+   color: var(--var-color);
+   padding-left: 30px;
+}
+.navbar button{
+   width: 100px;
+   height: 40px;
+   border-radius: 15px;
+   outline: none;
+   border: 1px solid var(--var-color);
+   background-color: transparent;
+   color: var(--var-color);
+   font-weight: 700;
+   margin-right: 30px;
+   transition: all 0.5s;
+}
+.navbar button:hover{
+   background-color: var(--fcolor);
+   color: var(--var-color);
+}
+/* DASHBOARD */
+.userdetails{
+   font-size: 20px;
+   font-weight: 600;
+   color: var(--fcolor);
+   margin: 1rem 4rem;
+   justify-content: center;
+}
+.dashboard{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.userdetails .dashboard div{
+   padding: 10px;
+}
+.userdetails .dashboard div span{
+   padding-left: 10px;
+}
+/* BANKHEADING */
+.balanceheading{
+   margin: 1rem 4rem;
+   color: var(--fcolor);
+   text-align: center;
+   text-decoration: underline;
+   text-transform: uppercase;
+}
+.balanceheading h4{
+   font-weight: 700;
+}
+/* BANKDETAILS */
+.bankdetails{
+   width: 100%;
+   display: grid;
+   grid-template-columns:1fr 1fr 1fr;
+   justify-items: center;
+   padding: 10px;
+}
+.bankdetails div{
+   border: 2px solid var(--fcolor);
+   height: 80px;
+   width: 50%;
+   border-radius: 15px;
+   transition: all 0.5s;
+   text-align: center;
+   color: var(--fcolor);
+}
+.bankdetails div:hover{
+   box-shadow: 5px 5px 11px 1px var(--fcolor);
+   background-color: var(--fcolor);
+   color: var(--var-color);
+}
+.bankdetails div h2{
+   padding-top: 5px;
+   font-size: 20PX;
+}
+.bankdetails div p,
+.bankdetails div span{
+   font-weight: 700;
+}
+/* BANKENTRY */
+.bankentry{
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-items: center;
+   margin-top: 30px;
+}
+.bankentry div h3{
+   color: var(--fcolor);
+}
+.bankentry div input{
+   width: 50%;
+   height: 30px;
+   margin: 5px 10px;
+   border-radius: 5px;
+   border: 2px solid var(--fcolor);
+   color: var(--fcolor);
+   font-weight: 700;
+   background-color: transparent;
+}
+
+.bankentry div button{
+   height: 35px;
+   padding: 0 10px;
+   border-radius: 5px;
+   border: 2px solid #F8EDE3;
+   background-color: var(--fcolor);
+   color: #F8EDE3;
+   transition: all 0.5s;
+}
+.bankentry div button:hover{
+   box-shadow: 5px 5px 11px 1px var(--fcolor);
+}
+/* Responsive */
+@media (max-width:768px) {
+   .navbar h1{
+       font-size: 20px;
+       padding-left: 15px;
+   }
+   .navbar button{
+       font-size: 15px;
+       height: auto;
+       margin-right: 15px;
+   }
+   .bankdetails{
+       grid-template-columns:1fr 1fr ;
+       margin-bottom: 20px;
+   }
+   .bankdetails div{
+       margin-bottom: 20px;
+   }
+   .bankentry{
+       width: 100%;
+       grid-template-columns: 1fr;
+       margin-bottom: 20px;
+   }
+
+
+}
+
+@media (max-width:570px) {
+   .navbar h1{
+       font-size: 15px;
+       padding-left: 5px;
+   }
+   .navbar button{
+       font-size: 10px;
+       height: 20px;
+       width: 70px;
+       margin-right: 5px;
+   }
+   .userdetails{
+       font-size: 17px;
+   }
+   .bankdetails{
+       grid-template-columns:1fr ;
+       margin-bottom: 20px;
+   }
+}
+@media (max-width:350px) {
+   .navbar h1{
+       font-size: 13px;
+       padding-left: 2px;
+   }
+   .navbar button{
+       font-size: 10px;
+       height: auto;
+       width: 50px;
+       margin-right: 2px;
+   }
+   .userdetails{
+       margin: auto;
+       font-size: 12px;
+       justify-content: center;
+   }
+   .balanceheading{
+       margin: 1rem 1rem;
+   }
+   .bankdetails div{
+       width: 70%;
+   }
+   .bankentry{
+       margin-left: 5px;
+   }
+   .bankentry h3{
+       font-size: 17px;
+       font-weight: 600;
+   }
+   .bankentry div input{
+       width: 70%;
+   }
+   .bankentry div button{
+       margin-left: 10px;
+   }
+
+}
